@@ -1,0 +1,24 @@
+.banner {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.nama-produk span {
+  font-size: 12px;
+}
+.thumb-checkout {
+  width: 100%;
+  border: 1px solid rgb(216, 215, 215);
+  display: flex;
+}
+.detail-checkout {
+  width: 100%;
+}
+
+@media and screen(max-width:414px) {
+  .thumb-checkout {
+    width: 100%;
+    border: 1px solid rgb(216, 215, 215);
+    display: inherit;
+  }
+}

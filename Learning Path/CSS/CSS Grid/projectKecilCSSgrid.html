@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+            img{
+                width: 100%;
+            }
+            body{
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 50px;
+            }
+
+        /* container */
+        .container{
+            display: grid;
+            gap: 10px;
+        }
+        /* Header */
+        .header{
+            display: grid;
+            grid-template-areas: 
+                'hero hero feature-1'
+                'hero hero feature-2'
+                ;
+            color: white;
+        }
+
+        .hero{
+            grid-area: hero;
+            min-height: 300px;
+            background-image: url(img/1.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+        }
+
+        .hero > * {
+            display: none;
+        }
+
+        .features{
+            background-color: black;
+            display: grid;
+            /* justify-content: center;
+            align-content: center; */
+            place-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .feature-1{
+            grid-area: feature-1;
+            background-image: url(img/2.jpg);
+            background-size: cover;
+        }
+        .feature-2{
+            grid-area: feature-2;
+            background-image: url(img/3.jpg);
+            background-size: cover;
+        }
+
+        .features .price{
+            font-size: 3em;
+            font-weight: 200;
+        }
+
+        /* Navigasi */
+        .menu{
+            order:-1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            gap: 5px;
+
+        }
+        .menu .brand{
+            font-size: 1.3em;
+            color: black;
+        }
+
+        .menu ul{
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            gap: 5px;
+            
+        }
+        .menu a{
+            display: block;
+            background-color:black;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        /* hamburger menu */
+        .menu-toggle {
+        display: none;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        }
+        .menu-toggle input {
+        position: absolute;
+        width: 40px;
+        height: 28px;
+        left: -6px;
+        top: -3px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+        }
+
+        .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: black;
+        border-radius: 3px;
+        z-index: 2;
+        transition: all 0.5s;
+        }.menu-toggle span:nth-child(2){
+            transform-origin:0 0 ;
+        }
+        .menu-toggle span:nth-child(4){
+            transform-origin:0 100% ;
+        }
+        .menu-toggle input:checked ~ span:nth-child(2){
+            background-color: white;
+            transform: rotate(45deg) translate(-1px,-1px);
+        }
+        .menu-toggle input:checked ~ span:nth-child(4){
+            background-color: white;
+            transform: rotate(-45deg) translate(-1px,0);
+        }
+        .menu-toggle input:checked ~ span:nth-child(3){
+            opacity: 0;
+            transform: scale(0);
+        }
+        .services{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        }
+        .service{
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            box-shadow: 0 0 2px rgba(0, 0,0, 0.3);
+        }
+        .services p{
+            font-size: 0.8em;
+
+        }
+        .galery{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 5px;
+        }
+        .galery h2{
+            grid-column: 1/-1;
+            text-align: center;
+            margin-bottom: 100px;
+
+        }
+        /* responsive breakpoint */
+
+        @media screen and (max-width: 1024px) {
+            .menu{
+                order: inherit;
+                grid-template-columns: 1fr ;
+            }   
+            .brand{
+                display: none;
+            }
+            .hero > * {
+                display: block;
+                background-color: black;
+                color: white;
+                padding: 5px;
+                margin-bottom: 5px;
+
+            }
+            .hero{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .menu{
+                order: -1;
+                justify-items: end;
+            }
+            .menu ul {
+                display: flex;
+                position: fixed;
+                z-index: 1;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                background-color: black;
+                transform: translateY(-100%); /*agar posisi disembunyikan ke kanan*/
+                transition: all 1s;
+                opacity: 0;
+            }
+            .menu-toggle {
+                display: flex;
+
+            }
+            nav ul.slide {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            nav ul li a {
+                color:black;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            body{
+                margin: 15px;
+            }
+            .header{
+                grid-template-areas: 
+                'hero'
+                'feature-1'
+                'feature-2'
+                ;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">WPU Merch Shop</h2>
+                <p class="sub-heading">Hoodie & T-shirt</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 250K</h4>
+                <p class="item">Hoodie</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 150K</h4>
+                <p class="item">T-shirt</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>WPU Merch</h1>
+            </div>
+            <ul class="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Galery</a></li>
+            </ul>
+        </nav>
+        <section class="services">
+            <div class="service">
+                <div class="icon"></div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et suscipit ut voluptate vitae at neque dignissimos fugiat consequatur ad? Autem optio eligendi itaque necessitatibus iste dolore non exercitationem numquam quis.</p>
+            </div>
+            <div class="service">
+                <div class="icon"></div>
+                <h3>Online course</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et suscipit ut voluptate vitae at neque dignissimos fugiat consequatur ad? Autem optio eligendi itaque necessitatibus iste dolore non exercitationem numquam quis.</p>
+            </div>
+            <div class="service">
+                <div class="icon"></div>
+                <h3>Podcast</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et suscipit ut voluptate vitae at neque dignissimos fugiat consequatur ad? Autem optio eligendi itaque necessitatibus iste dolore non exercitationem numquam quis.</p>
+            </div>
+            <div class="service">
+                <div class="icon"></div>
+                <h3>Merchant</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et suscipit ut voluptate vitae at neque dignissimos fugiat consequatur ad? Autem optio eligendi itaque necessitatibus iste dolore non exercitationem numquam quis.</p>
+            </div>
+        </section>
+        <section class="galery">
+            <h2>Galery</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/208x208" alt="">
+            <img src="https://source.unsplash.com/random/209x209" alt="">
+            <img src="https://source.unsplash.com/random/2010x2010" alt="">    
+        </section>
+    </div>
+<script>
+    const menutoggle = document.querySelector(".menu-toggle input");
+const nav = document.querySelector("nav ul");
+const main = document.querySelector(".main");
+
+menutoggle.addEventListener("click", function () {
+  nav.classList.toggle("slide");
+});
+
+main.addEventListener("click", function () {
+  nav.classList.remove("slide");
+});
+
+</script>
+</body>
+</html>

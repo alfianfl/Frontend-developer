@@ -1,0 +1,28 @@
+.register-modal .content-2 {
+    width: 80%;
+}
+.register-modal .content-2 h2 {
+    text-align: center;
+}
+.register-modal .modal-content {
+    border-radius: 20px;
+}
+.form-group input {
+    width: 100%;
+}
+.btn-register {
+    background-color: #0056fb;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.btn-register:hover {
+    background-color: #0041b9;
+    color: white;
+}
+.thumb {
+    min-width: 150px;
+    height: 150px;
+}

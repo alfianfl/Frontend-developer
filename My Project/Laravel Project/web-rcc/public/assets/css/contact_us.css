@@ -1,0 +1,20 @@
+#contact-us h4 {
+    text-align: left;
+    font-weight: bold;
+    color: #0b4477;
+}
+.list-contact span {
+    color: #303030;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.list-contact i {
+    color: #686868;
+    font-size: 35px;
+}
+.list-contact > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}

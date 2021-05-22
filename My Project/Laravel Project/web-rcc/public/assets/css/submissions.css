@@ -1,0 +1,152 @@
+.fa-trash-alt {
+    color: #c43030;
+    cursor: pointer;
+}
+/* table td {
+    color: #686868;
+    font-weight: 600;
+} */
+.progress {
+    position: relative;
+    width: 100%;
+}
+.bar {
+    background-color: #b5076f;
+    width: 0%;
+    height: 20px;
+}
+.percent {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    color: #040608;
+}
+#custom-button {
+    color: white;
+    background-color: #0b4477;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#custom-button:hover,
+.custom-button:hover {
+    background-color: #022f57;
+    color: white;
+}
+.custom-button {
+    color: white;
+    background-color: #0b4477;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.custom-text {
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #aaa;
+}
+#custom-text {
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #aaa;
+}
+.form-control {
+    font-size: 12px;
+    color: #aaa;
+}
+.text-delete {
+    font-size: 15px;
+}
+.btn-delete {
+    width: 10px;
+}
+.fa-edit {
+    color: #0b4477;
+    cursor: pointer;
+}
+.fa-edit:hover {
+    color: #042e53;
+}
+
+.fa-trash-alt:hover {
+    color: #a02424;
+}
+
+td:nth-child(1) {
+    background-color: #f2f2f2;
+}
+
+table {
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+td,
+th {
+    padding: 10px;
+}
+.important-date h4 {
+    color: #0b4477;
+}
+.background-keynote {
+    width: 100%;
+    background-color: #c4c4c4;
+}
+.table {
+    width: 100%;
+}
+.participant-fee {
+    text-align: center;
+    color: white;
+}
+.btn-proof {
+    background-color: #0b4477;
+    color: #ffff;
+    font-weight: 600;
+}
+.fa-plus-square {
+    font-size: 18px;
+}
+.btn-proof:hover {
+    background-color: #06355f;
+    color: #ffff;
+    font-weight: 600;
+}
+.modal-content h1 {
+    font-size: 25px;
+    color: #7e7e7e;
+    font-weight: bold;
+}
+.upload-proof {
+    height: 300px;
+}
+.btn-upload {
+    background-color: #0056fb;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.hover-download:hover {
+    color: #022f57;
+}
+.btn-upload:hover {
+    background-color: #0246c4;
+    color: white;
+}
+.tabel-conference table {
+    width: 100%;
+}
+/* responsive breakpoint */
+@media only screen and (max-width: 762px) {
+    .tabel-conference {
+        overflow: scroll;
+    }
+    .tabel-conference table {
+        width: 1200px;
+    }
+}

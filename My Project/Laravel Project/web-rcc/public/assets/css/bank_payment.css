@@ -1,0 +1,21 @@
+.bank-payment p {
+    text-align: center;
+    display: block;
+    height: 10px;
+}
+.bank-thumb-payment {
+    text-align: center;
+    color: white;
+}
+.bank-payment span {
+    font-weight: bold;
+}
+.publication {
+    text-align: center;
+    color: white;
+}
+/* .bank-payment p {
+    display: flex;
+    text-align: center;
+    background-color: red;
+} */

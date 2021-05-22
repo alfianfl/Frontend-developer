@@ -1,0 +1,50 @@
+.modal-content {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.content-1 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+}
+.login-modal .content-2 {
+    width: 100%;
+}
+.login-modal .content-2 h2 {
+    color: #7e7e7e;
+    font-weight: bold;
+    font-size: 20px;
+}
+.content-2 .form-group input,
+.form-group select {
+    background: #f2f2f2;
+    border-radius: 10px;
+    width: 100%;
+    color: #979797;
+    font-size: 15px;
+}
+.content-2 label:nth-child(1),
+.content-2 label:nth-child(1) {
+    color: #526280;
+}
+.btn-login {
+    background-color: #0056fb;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.btn-login:hover {
+    background-color: #0041b9;
+    color: white;
+}
+.change-register {
+    font-size: 15px;
+    text-align: center;
+    color: #979797;
+}

@@ -1,0 +1,30 @@
+#conference-description h4 {
+    text-align: center;
+    font-weight: bold;
+    color: #0B4477;
+}
+#conference-description .description,
+#conference-scope .description {
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.scope-keynote {
+    width: 100%;
+    background-size: cover;
+    color: #ffff;
+    font-weight: normal;
+}
+#conference-scope h4{
+    text-align: center;
+}
+/* responsive breakpoint */
+@media only screen and (max-width: 414px) {
+    #conference-description .description,
+    #conference-scope .description {
+        text-align: center;
+        margin-right: inherit;
+        margin-left: inherit;
+        font-size: 12px;
+    }
+}

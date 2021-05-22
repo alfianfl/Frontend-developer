@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Latihan intreaksi image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+        .thumbs{
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            background: #C4C4C4;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            opacity: 0;
+
+        }
+        .thumbs:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .active{
+            opacity: 0.5;
+        }
+       
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="thumbnail">
+            <input class="thumbs" style=";" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="thumbs" style=";" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="thumbs" style=";" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="thumbs" style=";" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="thumbs" style=";" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        </div>
+    </div>
+
+
+<script src="latihan10.js"></script>
+</body>
+</html>

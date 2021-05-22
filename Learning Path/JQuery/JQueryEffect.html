@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Negara</h1>
+    <ul class="negara">
+        <li>
+            amerika
+            <button id="button">Pergi!</button>
+            <button id="hidden">Hidden</button>
+            <button id="hapusButton">Hapus</button>
+        </li>
+        <li>
+            bandung
+        </li>
+        <li>
+            singapore
+        </li>
+    </ul>
+    <button id="toggle">Toggle</button>
+    <input type="text" value="200">
+    
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#button").on('click', function(){
+            alert('kita pergi ke Amerika')
+        })
+        $("#hapusButton").on('click', function(){
+            const komfirmasi = confirm('Hapus Amerika dari daftar anda');
+            if(komfirmasi == true){
+                $('.negara li:nth-child(1)').remove();
+            }else{
+                alert('tidak jadi dihapus');
+            }
+        })
+
+        // animation fade
+        $('#hidden').on('click', function(){
+            $('.negara li:nth-child(1)').fadeOut(500);
+        })
+
+        // animation slide toggle
+        $('#toggle').on('click', function(){
+            $('.negara li:nth-child(2)').slideToggle();
+                // animate (gabung dengan CSS)
+            $('.negara li:nth-child(3)').animate({
+                marginLeft:2000
+            });
+        })
+    });
+</script>
+</body>
+</html>

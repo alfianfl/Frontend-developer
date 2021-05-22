@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex Box</title>
+    <style type="text/css">
+        .container{
+            width: 600px; 
+            height: 150px;
+            border:5px solid grey;
+            margin: 30px auto;
+            padding:  5px;
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-end;
+            /* align-items: baseline; */
+            /* agar turun kebawah ketika tidak muat */
+            /* flex-wrap: wrap; */
+            /* flex-direction: row-reverse; */
+        }
+/* 
+        .container div:hover{
+            font-size: 60px;
+            cursor: pointer;
+        } */
+ 
+        .container div{
+            color: white;
+            /* flex-grow */
+            flex-grow: 1;
+            background-color: blue;
+            margin: 2px;
+        }
+        .container div.dua{
+            flex-grow: 2;
+            align-self: flex-start;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+#scientific-committee h4 {
+    text-align: center;
+    font-weight: bold;
+    color: #0b4477;
+}
+.table-striped tr {
+    text-align: center;
+}
+.organizating {
+    width: 100%;
+    background-size: cover;
+    color: #ffff;
+    text-align: center;
+}
+.bg-skyblue {
+    background-color: #dcf6ff;
+}
+tbody tr td {
+    font-weight: 400;
+}
+
+.background-keynote {
+    width: 100%;
+    background-color: #c4c4c4;
+}
+.organizating-committee p,
+ul {
+    text-align: center;
+}

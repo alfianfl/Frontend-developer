@@ -1,0 +1,33 @@
+.container-login100 {
+  background: #005689;
+  background: -webkit-linear-gradient(-135deg, #2a283d, #005689);
+  background: -o-linear-gradient(-135deg, #2a283d, #005689);
+  background: -moz-linear-gradient(-135deg, #2a283d, #005689);
+  background: linear-gradient(-135deg, #2a283d, #005689)
+}
+
+.login100-form-btn {
+  background: #005689
+}
+
+.login100-google-btn {
+  border: #005689 solid 1px;
+}
+
+.login100-google-btn:hover {
+  color: white;
+  border-color: white;
+  background-color: #005689;
+}
+
+.input100:focus+.focus-input100+.symbol-input100 {
+  color: #ffb43d
+}
+
+.txt2:hover {
+  color: #ffb43d
+}
+
+.input100:hover {
+  color: #ffb43d
+}
